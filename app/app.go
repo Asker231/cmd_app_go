@@ -13,6 +13,10 @@ import (
 	var id string
 	fmt.Println("Введите id")
 	fmt.Scan(&id)
+  if id > "10"{
+    fmt.Println( color.InBlackOverPurple ( "Человека с таким id нет"))
+    return 
+  }
 	getUserById(id)
 }
 
@@ -28,8 +32,8 @@ func getUserById(id string){
 	fmt.Println(err)
   }
   _ = json.Unmarshal(result,&user)
-  fmt.Println(string(color.InRedOverRed(user.Email)+ color.Bold))
+  fmt.Println(string(color.InWhiteOverRed(user.Email)+ color.Bold))
   fmt.Println(string(color.InWhiteOverBlack(user.Name)+ color.Bold))
-  fmt.Println(string(color.InGreenOverGreen(user.UserName)+ color.Bold))
-  fmt.Println(string(color.InCyanOverCyan(user.Adres.City)+ color.Bold))
+  fmt.Println(string(color.InWhiteOverGreen(user.UserName)+ color.Bold))
+  fmt.Println(string(color.InWhiteOverCyan(user.Adres.City)+ color.Bold))
 }
