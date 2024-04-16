@@ -1,9 +1,10 @@
 package main
 
-import ( ap "learn/app")
-
+import (
+	"learn/app"
+)
 
 func main(){
-    ap.
+   app.App()
 }
 
